@@ -9,7 +9,7 @@ const Rockets: React.FC<Props> = ({ data }) => {
     return (
         data.rockets.map((rocket: any) => {
             return (
-                <Rocket data={rocket} />
+                <Rocket data={rocket} key={rocket.rocket_name} />
             )
         })
     )

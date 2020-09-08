@@ -8,7 +8,7 @@ function Navbar() {
             <nav className="navbar navbar-dark navbar-expand-md sticky-top navigation-clean-button" style={{ height: '80px', color: '#ffffff', boxShadow: '1px 1px 10px #908ffe' }}>
                 <div className="container-fluid">
                     <Link className="navbar-brand" to="/">
-                        <img style={{ width: '20rem', height: '7rem' }} src={logo} alt="" />
+                        <img style={{ width: '20rem', height: '5rem' }} src={logo} alt="" />
                     </Link>
                     <button data-toggle="collapse" className="navbar-toggler" data-target="#navcol-1">
                         <span className="navbar-toggler-icon"></span>
