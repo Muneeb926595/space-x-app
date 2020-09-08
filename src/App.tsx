@@ -2,10 +2,10 @@ import React from 'react';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from './Components/Navbar';
-import Home from './Components/Home';
+import Home from './Components/Home/Home';
 import About from './Components/About';
 import Launches from './Components/Launches';
-import Rockets from './Components/Rockets';
+import RocketsContainer from './Components/Rockets/RocketsContainer';
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/launches" component={Launches} />
-        <Route exact path="/rockets" component={Rockets} />
+        <Route exact path="/rockets" component={RocketsContainer} />
         <Route exact path="/about" component={About} />
       </Switch>
     </Router>

@@ -1,16 +1,19 @@
 import React from 'react';
-import { useLaunchesQueryQuery } from '../../../generated/graphql';
+interface Props {
+    data: any;
+}
 
-function LaunchesList() {
-    const { data, loading, error } = useLaunchesQueryQuery();
-
-    if (error) return (<h2>Something went Wrong</h2>)
-
-    if (loading) return (<h2>Loading</h2>)
+const LaunchesList: React.FC<Props> = ({ data }) => {
 
     return (
-        <div className="col-md-3" style={{ height: '91vh', backgroundColor: '#ffffff' }}>
-
+        <div className="col-md-3" style={{ backgroundColor: '#ffffff' }}>
+            <ol className="mt-3 container-fluid">
+                {data.launches.map((launch: any) => {
+                    return (
+                        <a className="btn btn-outline-primary d-flex px-5">{launch.mission_name}</a>
+                    )
+                })}
+            </ol>
         </div>
     )
 }

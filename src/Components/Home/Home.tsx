@@ -1,6 +1,10 @@
 import React from 'react';
 
-function Home() {
+interface Props {
+    data: any;
+}
+
+const Home: React.FC<Props> = ({ data }) => {
     return (
         <div className="container" style={{ marginTop: '20vh', color: '#ffffff' }}>
             <h3 className="lead" style={{ marginBottom: '2rem' }}>NEXT LAUNCH</h3>
