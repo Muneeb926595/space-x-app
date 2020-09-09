@@ -10,11 +10,11 @@ function Navbar() {
                     <Link className="navbar-brand" to="/">
                         <img style={{ width: '20rem', height: '5rem' }} src={logo} alt="" />
                     </Link>
-                    <button data-toggle="collapse" className="navbar-toggler" data-target="#navcol-1">
+                    <button data-toggle="collapse" className="navbar-toggler" data-target="#navcol">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div
-                        className="collapse navbar-collapse" id="navcol-1">
+                        className="collapse navbar-collapse" id="navcol">
                         <ul className="nav navbar-nav ml-auto">
                             <li className="nav-item" role="presentation">
                                 <Link className="nav-link active" style={{ color: '#ffffff', fontSize: '0.875rem' }} to="/">

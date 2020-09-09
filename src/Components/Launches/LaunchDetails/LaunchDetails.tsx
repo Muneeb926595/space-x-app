@@ -6,9 +6,9 @@ interface Props {
 
 const LaunchDetails: React.FC<Props> = ({ data }) => {
     return (
-        <div className="col-md-9 mt-3" style={{ height: '80vh' }}>
+        <div className="col-12 mt-3" style={{ height: '80vh' }}>
             <div className="row">
-                <div className="col-md-8" style={{ paddingLeft: '30px' }}>
+                <div className="col-md-6" style={{ paddingLeft: '30px' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', padding: '10px 5px' }}>
                         <p style={{ color: '#A7A9AC' }}>Mission ID</p>
                         <p style={{ maxWidth: '500px', color: '#ffffff' }}>{data.launch.mission_id}</p>
@@ -44,7 +44,7 @@ const LaunchDetails: React.FC<Props> = ({ data }) => {
                         <p style={{ maxWidth: '500px', color: '#ffffff' }}>{data.launch.launch_date_local}</p>
                     </div>
                 </div>
-                <div className="col-md-4">
+                <div className="col-md-6">
                     <img style={{ width: '100%', height: '80vh', borderRadius: '5px' }} src={data.launch.links.flickr_images[0]} alt="rocket_image" />
                 </div>
             </div>

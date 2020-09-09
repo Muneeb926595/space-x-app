@@ -1,11 +1,14 @@
 import React from 'react';
 import { useLaunchInfoQuery } from '../../../generated/graphql';
 import LaunchDetails from './LaunchDetails';
+import { useParams } from 'react-router-dom';
+import Loading from '../../Loading';
 
 const LaunchDetailsContainer = () => {
-    const { data, error, loading } = useLaunchInfoQuery({ variables: { id: '15' } });
+    const { id } = useParams();
+    const { data, error, loading } = useLaunchInfoQuery({ variables: { id: `${id}` } });
 
-    if (loading) { return <h1>Loading ....</h1> }
+    if (loading) { return <Loading /> }
 
     if (error) { return <h1>Error.. Something went wrong while requesting data</h1> }
 

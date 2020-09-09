@@ -1,11 +1,12 @@
 import React from 'react';
 import { useLaunchesQueryQuery } from '../../../generated/graphql';
 import LaunchesList from './LaunchesList';
+import Loading from '../../Loading';
 
 const LaunchContainer = () => {
     const { data, error, loading } = useLaunchesQueryQuery();
 
-    if (loading) { return <h1>Loading ....</h1> }
+    if (loading) { return <Loading /> }
 
     if (error) { return <h1>Error.. Something went wrong while requesting data</h1> }
 
