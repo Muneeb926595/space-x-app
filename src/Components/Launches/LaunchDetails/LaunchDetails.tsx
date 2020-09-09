@@ -31,7 +31,7 @@ const LaunchDetails: React.FC<Props> = ({ data }) => {
                     <hr style={{ backgroundColor: '#A7A9AC', marginBottom: '0px' }} />
                     <div style={{ display: 'flex', justifyContent: 'space-between', padding: '10px 5px' }}>
                         <p style={{ color: '#A7A9AC' }}>Launch Sucess</p>
-                        <p style={{ maxWidth: '500px', color: '#ffffff' }}>{JSON.stringify(data.launch.launch_success)}</p>
+                        <p style={{ maxWidth: '500px', color: '#ffffff' }}>{data.launch.launch_success ? <p style={{ color: 'green' }}>Sucess</p> : <p style={{ color: 'red' }}>Failed</p>}</p>
                     </div>
                     <hr style={{ backgroundColor: '#A7A9AC', marginBottom: '0px' }} />
                     <div style={{ display: 'flex', justifyContent: 'space-between', padding: '10px 5px' }}>
