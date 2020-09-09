@@ -15,6 +15,7 @@ const LaunchesList: React.FC<Props> = ({ data }) => {
                         <Launch key={launch.flight_number} launch={launch} />
                     )
                 }
+                else return false;
             })}
         </React.Fragment>
     )
